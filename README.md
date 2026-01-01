@@ -2,6 +2,13 @@
 
 A decentralized voting system built with Python blockchain backend and React frontend, featuring transparent and secure voting with immutable blockchain records.
 
+## � Live Demo
+
+**Want to see it in action?** Deploy for free in 30 minutes:
+- 📖 [Quick Deployment Guide](DEPLOY_QUICKSTART.md) - Get live in 5 steps
+- 📖 [Visual Deployment Guide](DEPLOY_VISUAL_GUIDE.md) - Step-by-step with screenshots
+- 📖 [Complete Deployment Guide](DEPLOYMENT.md) - All options and details
+
 ## 🌟 Features
 
 - **Voter Registration & Eligibility Control**: Secure voter registration with unique credentials
@@ -9,6 +16,7 @@ A decentralized voting system built with Python blockchain backend and React fro
 - **Automatic Result Calculation**: Real-time vote counting and transparent results
 - **Blockchain Transparency**: All transactions recorded immutably on blockchain
 - **Tamper-Proof**: Prevents manipulation through proof-of-work validation
+- **Data Persistence**: Automatic file-based storage - no database required
 
 ## 🏗️ Architecture
 

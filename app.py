@@ -259,6 +259,12 @@ def get_transactions():
 
 
 if __name__ == '__main__':
+    # Support both development and production
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('DEBUG', 'True') == 'True'
+    
     print("Starting Blockchain Voting System API Server...")
-    print("Server running on http://localhost:5000")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    print(f"Server running on http://localhost:{port}")
+    print(f"Debug mode: {debug}")
+    
+    app.run(host='0.0.0.0', port=port, debug=debug)
