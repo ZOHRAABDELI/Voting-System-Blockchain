@@ -1,0 +1,35 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": 1767278401.170687,
+      "transactions": [],
+      "proof": 100,
+      "previous_hash": "0"
+    }
+  ],
+  "pending_transactions": [
+    {
+      "type": "register_voter",
+      "voter_hash": "143d517ef525ddfc3914262e13f046bde50bc419185b16f74c65fdf62637de7f",
+      "timestamp": "2026-01-01T15:40:42.767056"
+    },
+    {
+      "type": "create_election",
+      "election_id": "c7bb12e1-b358-4a2f-85c6-ff46d8cd3ff2",
+      "title": "Student Council President",
+      "candidates": [
+        "ABDELI ZOHRA",
+        "KHELILI SELMA"
+      ],
+      "timestamp": "2026-01-01T15:42:09.834286"
+    },
+    {
+      "type": "cast_vote",
+      "election_id": "c7bb12e1-b358-4a2f-85c6-ff46d8cd3ff2",
+      "vote_hash": "d0010cc051bac9cb8ce7b254d44bf721b56adce6b6a7703b99fb74fdc75d12e8",
+      "voter_hash": "143d517ef525ddfc3914262e13f046bde50bc419185b16f74c65fdf62637de7f",
+      "timestamp": "2026-01-01T15:42:15.863154"
+    }
+  ]
+}
