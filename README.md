@@ -4,10 +4,16 @@ A decentralized voting system built with Python blockchain backend and React fro
 
 ## � Live Demo
 
-**Want to see it in action?** Deploy for free in 30 minutes:
-- 📖 [Quick Deployment Guide](DEPLOY_QUICKSTART.md) - Get live in 5 steps
-- 📖 [Visual Deployment Guide](DEPLOY_VISUAL_GUIDE.md) - Step-by-step with screenshots
-- 📖 [Complete Deployment Guide](DEPLOYMENT.md) - All options and details
+**Want to see it in action?** Deploy for free in 20 minutes:
+
+### 🚀 Recommended: Deploy Both on Render (Easiest!)
+- 📖 **[RENDER_QUICK.md](RENDER_QUICK.md)** - Deploy both in 3 steps (20 min)
+- 📖 **[DEPLOY_RENDER_ONLY.md](DEPLOY_RENDER_ONLY.md)** - Complete Render guide
+
+### Alternative: Split Deployment
+- 📖 [DEPLOY_QUICKSTART.md](DEPLOY_QUICKSTART.md) - Render + Vercel (30 min)
+- 📖 [DEPLOY_VISUAL_GUIDE.md](DEPLOY_VISUAL_GUIDE.md) - Step-by-step with screenshots
+- 📖 [DEPLOYMENT.md](DEPLOYMENT.md) - All platform options
 
 ## 🌟 Features
 
