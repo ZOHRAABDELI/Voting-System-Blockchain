@@ -21,6 +21,24 @@ CORS(app)  # Enable CORS for React frontend
 blockchain = Blockchain()
 voting_contract = VotingContract(blockchain)
 
+# Load existing data from files
+print("Loading blockchain data...")
+if blockchain.load_from_file():
+    print(f"✓ Blockchain loaded: {len(blockchain.chain)} blocks")
+else:
+    print("✓ Starting with fresh blockchain")
+
+if voting_contract.load_from_file():
+    print(f"✓ Voting data loaded: {len(voting_contract.elections)} elections, {len(voting_contract.voters)} voters")
+else:
+    print("✓ Starting with fresh voting data")
+
+
+def save_data():
+    """Save blockchain and voting data to disk."""
+    blockchain.save_to_file()
+    voting_contract.save_to_file()
+
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
@@ -49,6 +67,7 @@ def mine_block():
     miner_address = data.get('miner_address', 'system')
     
     block = blockchain.mine_block(miner_address)
+    save_data()  # Save after mining
     
     return jsonify({
         'message': 'New block mined successfully',
@@ -70,6 +89,7 @@ def register_voter():
             voter_name=data['name'],
             email=data['email']
         )
+        save_data()  # Save after registration
         
         return jsonify({
             'success': True,
@@ -151,6 +171,7 @@ def create_election():
             start_time=data.get('start_time'),
             end_time=data.get('end_time')
         )
+        save_data()  # Save after election creation
         
         return jsonify({
             'success': True,
@@ -178,6 +199,7 @@ def cast_vote(election_id):
     )
     
     if result['success']:
+        save_data()  # Save after vote
         return jsonify(result), 200
     else:
         return jsonify(result), 400
@@ -208,6 +230,7 @@ def close_election(election_id):
     )
     
     if result['success']:
+        save_data()  # Save after closing election
         return jsonify(result), 200
     else:
         return jsonify(result), 400

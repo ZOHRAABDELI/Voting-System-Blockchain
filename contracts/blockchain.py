@@ -5,6 +5,7 @@ This module contains the core blockchain logic including blocks, chains, and pro
 
 import hashlib
 import json
+import os
 from time import time
 from typing import List, Dict, Any, Optional
 from uuid import uuid4
@@ -193,3 +194,62 @@ class Blockchain:
                         'timestamp': block.timestamp
                     })
         return transactions
+    
+    def save_to_file(self, filepath: str = 'data/blockchain.json'):
+        """
+        Save blockchain to a JSON file.
+        
+        Args:
+            filepath: Path to save the blockchain data
+        """
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        
+        data = {
+            'chain': self.get_chain_data(),
+            'pending_transactions': self.pending_transactions
+        }
+        
+        with open(filepath, 'w') as f:
+            json.dump(data, f, indent=2)
+    
+    def load_from_file(self, filepath: str = 'data/blockchain.json') -> bool:
+        """
+        Load blockchain from a JSON file.
+        
+        Args:
+            filepath: Path to load the blockchain data from
+            
+        Returns:
+            True if loaded successfully, False otherwise
+        """
+        if not os.path.exists(filepath):
+            return False
+        
+        try:
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+            
+            # Reconstruct chain from saved data
+            self.chain = []
+            for block_data in data['chain']:
+                block = Block(
+                    index=block_data['index'],
+                    timestamp=block_data['timestamp'],
+                    transactions=block_data['transactions'],
+                    proof=block_data['proof'],
+                    previous_hash=block_data['previous_hash']
+                )
+                self.chain.append(block)
+            
+            self.pending_transactions = data.get('pending_transactions', [])
+            
+            # Validate loaded chain
+            if not self.is_chain_valid():
+                print("Warning: Loaded blockchain is invalid!")
+                return False
+            
+            return True
+        except Exception as e:
+            print(f"Error loading blockchain: {e}")
+            return False

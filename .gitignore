@@ -31,3 +31,6 @@ frontend/.env.local
 
 # Logs
 *.log
+
+# Data persistence files (optional - remove if you want to commit data)
+data/

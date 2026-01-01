@@ -5,6 +5,7 @@ This module handles voter registration, vote casting, and vote counting.
 
 import hashlib
 import json
+import os
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 from uuid import uuid4
@@ -300,3 +301,50 @@ class VotingContract:
             'registered_at': voter['registered_at'],
             'eligible': voter['eligible']
         }
+    
+    def save_to_file(self, filepath: str = 'data/voting_data.json'):
+        """
+        Save voting contract data to a JSON file.
+        
+        Args:
+            filepath: Path to save the voting data
+        """
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        
+        data = {
+            'elections': self.elections,
+            'voters': self.voters,
+            'votes': self.votes,
+            'voter_hashes': self.voter_hashes
+        }
+        
+        with open(filepath, 'w') as f:
+            json.dump(data, f, indent=2)
+    
+    def load_from_file(self, filepath: str = 'data/voting_data.json') -> bool:
+        """
+        Load voting contract data from a JSON file.
+        
+        Args:
+            filepath: Path to load the voting data from
+            
+        Returns:
+            True if loaded successfully, False otherwise
+        """
+        if not os.path.exists(filepath):
+            return False
+        
+        try:
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+            
+            self.elections = data.get('elections', {})
+            self.voters = data.get('voters', {})
+            self.votes = data.get('votes', {})
+            self.voter_hashes = data.get('voter_hashes', {})
+            
+            return True
+        except Exception as e:
+            print(f"Error loading voting data: {e}")
+            return False

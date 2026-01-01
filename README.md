@@ -17,9 +17,10 @@ A decentralized voting system built with Python blockchain backend and React fro
 - Flask REST API server
 - Smart contract for voting logic
 - Anonymous voting using cryptographic hashing
+- **File-based persistence** - Data survives server restarts
 
 ### Frontend (React + Tailwind CSS)
-- Modern, responsive UI
+- Modern, responsive UI with animations
 - Real-time election results
 - Blockchain explorer
 - Voter authentication system
@@ -131,6 +132,36 @@ A decentralized voting system built with Python blockchain backend and React fro
 3. **Immutable Records**: Blockchain ensures votes cannot be altered
 4. **Proof of Work**: Validates blockchain integrity
 5. **Secure Credentials**: Each voter has unique ID and secret key
+6. **Data Persistence**: Automatic saving to disk ensures data survives restarts
+
+## 💾 Data Persistence
+
+The system now includes **automatic file-based persistence**:
+
+- **Blockchain data** is saved to `data/blockchain.json`
+- **Voting data** is saved to `data/voting_data.json`
+- Data is **automatically saved** after every operation (registration, voting, mining)
+- Data is **automatically loaded** when the server starts
+- No database required - simple JSON file storage
+- Data persists across server restarts
+
+### Manual Testing
+
+Run the persistence test to verify functionality:
+```bash
+python test_persistence.py
+```
+
+### Data Location
+
+All data is stored in the `data/` directory:
+```
+data/
+├── blockchain.json      # Blockchain and transaction data
+└── voting_data.json     # Elections, voters, and votes
+```
+
+**Note**: The `data/` directory is git-ignored by default. Remove from `.gitignore` if you want to commit data.
 
 ## 📊 Learning Outcomes
 
