@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Starting Blockchain Voting System..."
+echo "Starting Blockchain Voting System..."
 echo ""
 
 # Start backend
@@ -12,13 +12,13 @@ BACKEND_PID=$!
 sleep 3
 
 # Start frontend
-echo "⚛️  Starting React frontend..."
+echo "Starting React frontend..."
 cd frontend
 npm start &
 FRONTEND_PID=$!
 
 echo ""
-echo "✅ System started successfully!"
+echo "System started successfully!"
 echo ""
 echo "Backend API: http://localhost:5000"
 echo "Frontend: http://localhost:3000"

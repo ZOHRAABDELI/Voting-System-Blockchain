@@ -119,7 +119,7 @@ def main():
         print()
         
     except Exception as e:
-        print(f"\n❌ Test failed with error: {str(e)}")
+        print(f"\nTest failed with error: {str(e)}")
         import traceback
         traceback.print_exc()
         return 1

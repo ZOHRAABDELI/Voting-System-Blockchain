@@ -1,12 +1,12 @@
-# 🎯 Render-Only Deployment - Quick Guide
+# Render-Only Deployment - Quick Guide
 
 **Deploy both frontend and backend on Render in under 20 minutes!**
 
 ---
 
-## ⚡ Super Quick Steps
+## Super Quick Steps
 
-### 1️⃣ Deploy Backend (5 min)
+### 1. Deploy Backend (5 min)
 
 **Go to**: https://render.com → Sign in with GitHub
 
@@ -21,7 +21,7 @@
 
 ---
 
-### 2️⃣ Build Frontend Locally (2 min)
+### 2. Build Frontend Locally (2 min)
 
 ```bash
 cd frontend
@@ -35,7 +35,7 @@ npm run build
 
 ---
 
-### 3️⃣ Deploy Frontend (3 min)
+### 3. Deploy Frontend (3 min)
 
 **Create Static Site on Render**:
 - Same repository
@@ -48,18 +48,18 @@ npm run build
 
 ---
 
-### 4️⃣ Test! (2 min)
+### 4. Test! (2 min)
 
 Visit: `https://voting-blockchain-xxxx.onrender.com`
 
-- ✅ Register voter
-- ✅ Create election
-- ✅ Cast vote
-- ✅ View results
+- Register voter
+- Create election
+- Cast vote
+- View results
 
 ---
 
-## 🎉 Done!
+## Done!
 
 **Your URLs:**
 - Frontend: `https://voting-blockchain-xxxx.onrender.com`
@@ -71,7 +71,7 @@ Visit: `https://voting-blockchain-xxxx.onrender.com`
 
 ---
 
-## ⚠️ Important
+## Important
 
 **Backend sleeps after 15 minutes** (free tier)
 - First request: ~30 seconds (wakes up)
@@ -93,4 +93,4 @@ Visit: `https://voting-blockchain-xxxx.onrender.com`
 
 **Full Guide**: See [DEPLOY_RENDER_ONLY.md](DEPLOY_RENDER_ONLY.md)
 
-Happy deploying! 🚀
+Happy deploying!

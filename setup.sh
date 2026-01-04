@@ -8,19 +8,19 @@ echo ""
 # Check Python installation
 echo "Checking Python installation..."
 if ! command -v python3 &> /dev/null; then
-    echo "❌ Python 3 is not installed. Please install Python 3.8 or higher."
+    echo "Python 3 is not installed. Please install Python 3.8 or higher."
     exit 1
 fi
-echo "✅ Python $(python3 --version) found"
+echo "Python $(python3 --version) found"
 echo ""
 
 # Check Node.js installation
 echo "Checking Node.js installation..."
 if ! command -v node &> /dev/null; then
-    echo "❌ Node.js is not installed. Please install Node.js 14 or higher."
+    echo "Node.js is not installed. Please install Node.js 14 or higher."
     exit 1
 fi
-echo "✅ Node.js $(node --version) found"
+echo "Node.js $(node --version) found"
 echo ""
 
 # Install Python dependencies

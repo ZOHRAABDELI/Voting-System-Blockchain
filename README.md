@@ -2,14 +2,14 @@
 
 A decentralized voting system built with Python blockchain backend and React frontend, featuring transparent and secure voting with immutable blockchain records.
 
-## � Live Demo
+## Live Demo
 
 **Try the live application:**
-- 🚀 **Frontend**: [https://voting-system-blockchain-1.onrender.com](https://voting-system-blockchain-1.onrender.com)
-- 🔌 **Backend API**: [https://voting-system-blockchain.onrender.com](https://voting-system-blockchain.onrender.com)
+- **Frontend**: [https://voting-system-blockchain-1.onrender.com](https://voting-system-blockchain-1.onrender.com)
+- **Backend API**: [https://voting-system-blockchain.onrender.com](https://voting-system-blockchain.onrender.com)
 
 
-## 🌟 Features
+## Features
 
 - **Voter Registration & Eligibility Control**: Secure voter registration with unique credentials
 - **Anonymous Vote Submission**: Cast votes anonymously while maintaining integrity
@@ -18,7 +18,7 @@ A decentralized voting system built with Python blockchain backend and React fro
 - **Tamper-Proof**: Prevents manipulation through proof-of-work validation
 - **Data Persistence**: Automatic file-based storage - no database required
 
-## 🏗️ Architecture
+## Architecture
 
 ### Backend (Python)
 - Custom blockchain implementation with proof-of-work
@@ -33,7 +33,7 @@ A decentralized voting system built with Python blockchain backend and React fro
 - Blockchain explorer
 - Voter authentication system
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -74,7 +74,7 @@ A decentralized voting system built with Python blockchain backend and React fro
    
    The frontend will open at `http://localhost:3000`
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### 1. Register as a Voter
 - Navigate to the Register page
@@ -106,7 +106,7 @@ A decentralized voting system built with Python blockchain backend and React fro
 - See transaction history
 - Mine new blocks to commit pending transactions
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Voter Endpoints
 - `POST /api/voters/register` - Register a new voter
@@ -126,14 +126,14 @@ A decentralized voting system built with Python blockchain backend and React fro
 - `POST /api/mine` - Mine a new block
 - `GET /api/transactions` - Get transaction history
 
-## 🎯 Use Cases
+## Use Cases
 
 - **Scientific Club Elections**: Democratic election of club officers
 - **Course Polls**: Gather student feedback on courses
 - **Project Evaluations**: Vote on best projects or presentations
 - **Competition Judging**: Fair and transparent competition results
 
-## 🔐 Security Features
+## Security Features
 
 1. **Anonymous Voting**: Votes are recorded with cryptographic hashes
 2. **One Vote Per Person**: System prevents double voting
@@ -142,7 +142,7 @@ A decentralized voting system built with Python blockchain backend and React fro
 5. **Secure Credentials**: Each voter has unique ID and secret key
 6. **Data Persistence**: Automatic saving to disk ensures data survives restarts
 
-## 💾 Data Persistence
+## Data Persistence
 
 The system now includes **automatic file-based persistence**:
 
@@ -171,7 +171,7 @@ data/
 
 **Note**: The `data/` directory is git-ignored by default. Remove from `.gitignore` if you want to commit data.
 
-## 📊 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 - How blockchain ensures transparency in voting
@@ -180,7 +180,7 @@ This project demonstrates:
 - Proof-of-work consensus mechanism
 - Smart contract implementation for voting logic
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Backend:**
 - Python 3
@@ -196,7 +196,7 @@ This project demonstrates:
 - Tailwind CSS (Styling)
 - PostCSS & Autoprefixer
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Voting-System-Blockchain/
@@ -228,13 +228,3 @@ Voting-System-Blockchain/
 ├── requirements.txt           # Python dependencies
 └── README.md
 ```
-
-## 👥 Authors
-
-Created for blockchain voting system demonstration and educational purposes.
-
-## 🙏 Acknowledgments
-
-- Built as part of blockchain technology coursework
-- Demonstrates practical application of blockchain in voting systems
-- Inspired by the need for transparent and secure voting mechanisms
