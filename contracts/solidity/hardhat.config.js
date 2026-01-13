@@ -1,8 +1,9 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config();
+// Minimal Hardhat configuration for Hardhat 3 (ESM)
+import "@nomicfoundation/hardhat-ethers";
+import "dotenv/config";
 
 /** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
+export default {
   solidity: {
     version: "0.8.20",
     settings: {
@@ -15,27 +16,18 @@ module.exports = {
   networks: {
     // Local development network
     localhost: {
-      url: "http://127.0.0.1:8545",
-      chainId: 31337
-    },
-    // Ethereum Sepolia testnet (for testing)
-    sepolia: {
-      url: process.env.SEPOLIA_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: 11155111
-    },
-    // Ethereum mainnet (production - use with caution!)
-    mainnet: {
-      url: process.env.MAINNET_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: 1
+      url: "http://127.0.0.1:8545"
     }
   },
   paths: {
-    sources: "./",
+    sources: "./contracts",
     tests: "./test",
     cache: "./cache",
     artifacts: "./artifacts"
+  },
+  // Ignore OpenZeppelin node_modules to avoid path issues
+  mocha: {
+    timeout: 40000
   },
   // Gas reporter configuration
   gasReporter: {

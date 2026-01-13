@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/media/maria/DATA/4th year/sem1/blockchain/project/Voting-System-Blockchain/contracts/solidity/contracts/VotingSystem.sol": {
+      "lastModificationDate": 1768305971699,
+      "contentHash": "50790ba8f0ed00375861b1ccf3a06746",
+      "sourceName": "contracts/VotingSystem.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VotingSystem"
+      ]
+    }
+  }
+}
