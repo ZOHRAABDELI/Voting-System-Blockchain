@@ -1,0 +1,40 @@
+{
+  "elections": {
+    "c7bb12e1-b358-4a2f-85c6-ff46d8cd3ff2": {
+      "id": "c7bb12e1-b358-4a2f-85c6-ff46d8cd3ff2",
+      "title": "Student Council President",
+      "description": "select best representative for ENSIA student",
+      "candidates": [
+        "ABDELI ZOHRA",
+        "KHELILI SELMA"
+      ],
+      "creator": "72eb23ea-852b-4425-9dd0-727b2c6d5181",
+      "created_at": "2026-01-01T15:42:09.834274",
+      "start_time": null,
+      "end_time": null,
+      "status": "active"
+    }
+  },
+  "voters": {
+    "72eb23ea-852b-4425-9dd0-727b2c6d5181": {
+      "id": "72eb23ea-852b-4425-9dd0-727b2c6d5181",
+      "name": "ABDELI Zahra",
+      "email": "abdelizohr@gmail.com",
+      "registered_at": "2026-01-01T15:40:42.767039",
+      "secret_key": "dc4dc94a-9bd2-419d-9786-2e91e85fbaa2",
+      "eligible": true
+    }
+  },
+  "votes": {
+    "c7bb12e1-b358-4a2f-85c6-ff46d8cd3ff2": {
+      "72eb23ea-852b-4425-9dd0-727b2c6d5181": {
+        "candidate": "ABDELI ZOHRA",
+        "timestamp": "2026-01-01T15:42:15.863150",
+        "vote_hash": "d0010cc051bac9cb8ce7b254d44bf721b56adce6b6a7703b99fb74fdc75d12e8"
+      }
+    }
+  },
+  "voter_hashes": {
+    "72eb23ea-852b-4425-9dd0-727b2c6d5181": "143d517ef525ddfc3914262e13f046bde50bc419185b16f74c65fdf62637de7f"
+  }
+}
