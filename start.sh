@@ -4,7 +4,7 @@ echo "Starting Blockchain Voting System..."
 echo ""
 
 # Start backend
-echo "📦 Starting Flask backend server..."
+echo "Starting Flask backend server..."
 python app.py &
 BACKEND_PID=$!
 
