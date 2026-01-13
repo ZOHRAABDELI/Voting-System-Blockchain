@@ -162,7 +162,6 @@ contract VotingContract {
      */
     function castVote(uint electionId, uint candidateIndex)
         external
-        onlyRegisteredVoter
         electionExists(electionId)
         electionActive(electionId)
     {

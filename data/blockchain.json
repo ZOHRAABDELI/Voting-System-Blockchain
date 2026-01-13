@@ -30,6 +30,38 @@
       "vote_hash": "d0010cc051bac9cb8ce7b254d44bf721b56adce6b6a7703b99fb74fdc75d12e8",
       "voter_hash": "143d517ef525ddfc3914262e13f046bde50bc419185b16f74c65fdf62637de7f",
       "timestamp": "2026-01-01T15:42:15.863154"
+    },
+    {
+      "type": "create_election",
+      "election_id": "801e08ee-ef4a-42b4-b94e-96360c195351",
+      "title": "Test election",
+      "candidates": [
+        "selma",
+        "zohra"
+      ],
+      "timestamp": "2026-01-13T14:56:44.445763"
+    },
+    {
+      "type": "create_election",
+      "election_id": "54e2a03b-2865-4442-a97f-990da8452f03",
+      "title": "Council elections",
+      "candidates": [
+        "selma",
+        "zohra"
+      ],
+      "timestamp": "2026-01-13T14:59:27.396709"
+    },
+    {
+      "type": "register_voter",
+      "voter_hash": "0d88810f2e17380dca4dfbc10ba30e913cbe10d685c6f603d85b5c90a6ef8fe5",
+      "timestamp": "2026-01-13T15:01:00.821472"
+    },
+    {
+      "type": "cast_vote",
+      "election_id": "54e2a03b-2865-4442-a97f-990da8452f03",
+      "vote_hash": "e22cbfc26e08b3a44d71feba16111a21a0489635d6bf692e790d393c90da67ab",
+      "voter_hash": "0d88810f2e17380dca4dfbc10ba30e913cbe10d685c6f603d85b5c90a6ef8fe5",
+      "timestamp": "2026-01-13T15:01:21.060175"
     }
   ]
 }

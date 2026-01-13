@@ -13,6 +13,34 @@
       "start_time": null,
       "end_time": null,
       "status": "active"
+    },
+    "801e08ee-ef4a-42b4-b94e-96360c195351": {
+      "id": "801e08ee-ef4a-42b4-b94e-96360c195351",
+      "title": "Test election",
+      "description": "Test election",
+      "candidates": [
+        "selma",
+        "zohra"
+      ],
+      "creator": "92f17f74-fbeb-44ce-9bec-9adf01f2ca3e",
+      "created_at": "2026-01-13T14:56:44.445751",
+      "start_time": null,
+      "end_time": null,
+      "status": "active"
+    },
+    "54e2a03b-2865-4442-a97f-990da8452f03": {
+      "id": "54e2a03b-2865-4442-a97f-990da8452f03",
+      "title": "Council elections",
+      "description": "Council elections",
+      "candidates": [
+        "selma",
+        "zohra"
+      ],
+      "creator": "92f17f74-fbeb-44ce-9bec-9adf01f2ca3e",
+      "created_at": "2026-01-13T14:59:27.396691",
+      "start_time": null,
+      "end_time": null,
+      "status": "active"
     }
   },
   "voters": {
@@ -23,6 +51,14 @@
       "registered_at": "2026-01-01T15:40:42.767039",
       "secret_key": "dc4dc94a-9bd2-419d-9786-2e91e85fbaa2",
       "eligible": true
+    },
+    "979eacee-a7d9-4c3a-9e09-2c8d699ec579": {
+      "id": "979eacee-a7d9-4c3a-9e09-2c8d699ec579",
+      "name": "Zohra",
+      "email": "zohra@gmail.com",
+      "registered_at": "2026-01-13T15:01:00.821458",
+      "secret_key": "243f18f9-0db6-4445-85ce-fb62ba50ddac",
+      "eligible": true
     }
   },
   "votes": {
@@ -32,9 +68,18 @@
         "timestamp": "2026-01-01T15:42:15.863150",
         "vote_hash": "d0010cc051bac9cb8ce7b254d44bf721b56adce6b6a7703b99fb74fdc75d12e8"
       }
+    },
+    "801e08ee-ef4a-42b4-b94e-96360c195351": {},
+    "54e2a03b-2865-4442-a97f-990da8452f03": {
+      "979eacee-a7d9-4c3a-9e09-2c8d699ec579": {
+        "candidate": "selma",
+        "timestamp": "2026-01-13T15:01:21.060168",
+        "vote_hash": "e22cbfc26e08b3a44d71feba16111a21a0489635d6bf692e790d393c90da67ab"
+      }
     }
   },
   "voter_hashes": {
-    "72eb23ea-852b-4425-9dd0-727b2c6d5181": "143d517ef525ddfc3914262e13f046bde50bc419185b16f74c65fdf62637de7f"
+    "72eb23ea-852b-4425-9dd0-727b2c6d5181": "143d517ef525ddfc3914262e13f046bde50bc419185b16f74c65fdf62637de7f",
+    "979eacee-a7d9-4c3a-9e09-2c8d699ec579": "0d88810f2e17380dca4dfbc10ba30e913cbe10d685c6f603d85b5c90a6ef8fe5"
   }
 }
